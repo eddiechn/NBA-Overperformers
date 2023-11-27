@@ -1,6 +1,7 @@
 import pandas as pd
 import subprocess
 import os
+from IPython.display import HTML
 
 
 
@@ -51,15 +52,19 @@ top_reb_diff = combined.nlargest(3, 'REB_diff')[['Name', 'REB_last', 'REB_avg', 
 top_3pm_diff = combined.nlargest(3, '3PM_diff')[['Name', '3PM_last', '3PM_avg', '3PM_diff']]
 
 
-
-
 def results():
-    # Assuming you have already defined top_pts_diff, top_ast_diff, etc.
-    # Convert DataFrames to HTML tables
-    html_top_pts_diff = top_pts_diff.to_html(index=False, border=1)
-    html_top_ast_diff = top_ast_diff.to_html(index=False, border=1)
-    html_top_reb_diff = top_reb_diff.to_html(index=False, border=1)
-    html_top_3pm_diff = top_3pm_diff.to_html(index=False, border=1)
+
+    top_pts_diff.rename(columns={'Name': 'Player Name', 'PTS_diff': 'Point Difference', 'PTS_last' : 'Points Last Game', 'PTS_avg' : 'Average PTS/game' }, inplace=True)
+    top_ast_diff.rename(columns={'Name': 'Player Name', 'AST_diff': 'Assist Difference', 'AST_last' : 'Assists Last Game', 'AST_avg' : 'Average AST/game'}, inplace=True)
+    top_reb_diff.rename(columns={'Name': 'Player Name', 'REB_diff': 'Rebounds Difference', 'REB_last' : 'Rebounds Last Game', 'REB_avg' : 'Average REB/game'}, inplace=True)
+    top_3pm_diff.rename(columns={'Name': 'Player Name', '3PM_diff': '3PM Difference', '3PM_last' : '3PM Last Game', '3PM_avg' : 'Average 3PM/game'}, inplace=True)
+
+   
+
+    html_top_pts_diff = top_pts_diff.to_html(index=False, justify ="left", border=1)
+    html_top_ast_diff = top_ast_diff.to_html(index=False, justify ="left", border=1)
+    html_top_reb_diff = top_reb_diff.to_html(index=False, justify ="left", border=1)
+    html_top_3pm_diff = top_3pm_diff.to_html(index=False, justify ="left", border=1)
     
     # Combine all HTML tables into a single HTML string with titles
     result_html = f"""
