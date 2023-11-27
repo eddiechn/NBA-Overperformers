@@ -18,8 +18,8 @@ class LastGameSpider(scrapy.Spider):
         for row in rows: 
             name = row.xpath('./td/span[@class="CellPlayerName--long"]/span/a/text()').get().strip()
             pts = row.xpath('./td[5]/text()').get().strip()
-            ast = row.xpath('./td[6]/text()').get().strip()
-            reb = row.xpath('./td[7]/text()').get().strip()
+            ast = row.xpath('./td[7]/text()').get().strip()
+            reb = row.xpath('./td[6]/text()').get().strip()
             fg3 = row.xpath('./td[8]/text()').get().strip()
 
             # cleaning data

@@ -21,16 +21,17 @@ class AveragesSpider(scrapy.Spider):
             fg3 = row.xpath("./td[10]/text()").get()
             ast = row.xpath("./td[19]/text()").get()
             reb = row.xpath("./td[18]/text()").get()
-           
+        
     
 
             yield {
                 "Name" : name, 
                 "Team" : team,  
-                "PPG" : pts, 
+                "PTS" : pts, 
+                "AST" : ast, 
+                "REB" : reb,
                 "3PM" : fg3, 
-                "APG" : ast, 
-                "RPG" : reb, 
+                 
                  
             }
 
