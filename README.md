@@ -28,8 +28,11 @@ set EMAIL_PASSWORD=your_16_digit_code
 
 Make sure to replace your_email@gmail.com, receiver_email@gmail.com, and your_16_digit_code with your actual information.
 
+## Usage
 To run the bot, execute : 
-
+```
 python main.py
+```
 
+## Databases
 Statistics come from RealGm and CBS Sports
