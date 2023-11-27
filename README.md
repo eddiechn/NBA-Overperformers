@@ -33,6 +33,7 @@ To run the bot, execute :
 ```
 python main.py
 ```
+You will need to set up Windows Task Scheduler to get your daily updates via email.
 
 ## Databases
 Statistics come from RealGm and CBS Sports
