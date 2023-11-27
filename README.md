@@ -21,11 +21,11 @@ EMAIL_PASSWORD: The 16-digit app password generated from your Google account's 2
 
 
 For Windows, you can set the environment variables like this in your cmd:
-
+```
 set EMAIL_SENDER=your_email@gmail.com
 set EMAIL_RECEIVER=receiver_email@gmail.com
 set EMAIL_PASSWORD=your_16_digit_code
-
+```
 Make sure to replace your_email@gmail.com, receiver_email@gmail.com, and your_16_digit_code with your actual information.
 
 ## Usage
