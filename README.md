@@ -5,14 +5,7 @@ This project is an automated bot developed in Python that sends out an email eve
 
 ## Installation
 
-To set up this project locally, follow these steps:
 
-```bash
-git clone https://github.com/eddiechn/nba-overperformers.git
-cd nba-overperformers-bot
-pip install -r requirements.txt
-
-```
 Before running the application, you will need to set up the following environment variables:
 
 EMAIL_SENDER: The email address that will send the reports.
